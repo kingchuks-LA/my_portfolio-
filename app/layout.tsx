@@ -40,6 +40,7 @@ export default function RootLayout({
               <Link href="/">Home</Link>
               <Link href="/about">About</Link>
               <Link href="/experience">Experience</Link>
+              <Link href="/projects">Projects</Link>
               <Link href="/case-studies/trusted-carpool-network">
                 Case Study
               </Link>
