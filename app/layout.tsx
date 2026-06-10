@@ -15,8 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Kingsley Emeka",
-  description:
-    "Technical Product Owner, Systems Thinker, and Web Engineer.",
+  description: "Technical Product Owner, Systems Thinker, and Web Engineer.",
 };
 
 export default function RootLayout({
@@ -40,10 +39,9 @@ export default function RootLayout({
               <Link href="/">Home</Link>
               <Link href="/about">About</Link>
               <Link href="/experience">Experience</Link>
+              <Link href="/systems-design">Systems Design</Link>
               <Link href="/projects">Projects</Link>
-              <Link href="/case-studies/trusted-carpool-network">
-                Case Study
-              </Link>
+              <Link href="/resume">Resume</Link>
               <Link href="/contact">Contact</Link>
             </div>
           </nav>
@@ -53,7 +51,8 @@ export default function RootLayout({
 
         <footer className="border-t">
           <div className="mx-auto max-w-6xl px-6 py-6 text-sm">
-            © 2026 Kingsley Emeka. Technical Product Owner • Systems Thinker • Web Engineer.
+            © 2026 Kingsley Emeka. Technical Product Owner • Business Analyst •
+            Solution Architect.
           </div>
         </footer>
       </body>
