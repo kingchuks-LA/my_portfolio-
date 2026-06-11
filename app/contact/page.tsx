@@ -19,7 +19,7 @@ export default function ContactPage() {
             <h2 className="mb-3 text-xl font-semibold">LinkedIn</h2>
             <p>Let's connect professionally and exchange ideas.</p>
             <a
-              href="www.linkedin.com/in/kingsleyemeka"
+              href="https://www.linkedin.com/in/kingsleyemeka"
               target="_blank"
               className="underline"
             >

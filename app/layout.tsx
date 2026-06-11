@@ -30,12 +30,12 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <header className="border-b">
-          <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+          <nav className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-4 px-5 py-4">
             <Link href="/" className="font-bold">
               Kingsley Emeka
             </Link>
 
-            <div className="flex gap-6">
+            <div className="flex flex-wrap gap-4">
               <Link href="/">Home</Link>
               <Link href="/about">About</Link>
               <Link href="/experience">Experience</Link>
