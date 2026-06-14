@@ -41,6 +41,7 @@ export default function RootLayout({
               <Link href="/experience">Experience</Link>
               <Link href="/systems-design">Systems Design</Link>
               <Link href="/projects">Projects</Link>
+              <Link href="/come-learn-with-me">Come Learn With Me</Link>
               <Link href="/resume">Resume</Link>
               <Link href="/contact">Contact</Link>
             </div>
