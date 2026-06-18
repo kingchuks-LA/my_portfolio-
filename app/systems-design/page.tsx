@@ -8,18 +8,15 @@ export default function SystemsDesignPage() {
         <p className="mb-4 text-sm font-semibold uppercase tracking-wide">
           Systems Design
         </p>
-
         <h1 className="mb-6 text-4xl font-bold">
           Designing Practical, Scalable Systems
         </h1>
-
         <p className="mb-12 max-w-3xl text-lg leading-8">
           I use systems thinking to connect product goals with technical
           architecture. This includes understanding users, modeling data,
           designing services, and making trade-offs between simplicity,
           scalability, trust, and delivery speed.
         </p>
-
         <section className="mt-16 rounded-xl border p-8">
           <h2 className="mb-4 text-3xl font-semibold">
             Trusted Carpool Network
@@ -48,133 +45,321 @@ export default function SystemsDesignPage() {
             </span>
           </div>
         </section>
-        <section className="mt-16">
-          <h2 className="mb-6 text-2xl font-semibold">Key Design Decisions</h2>
 
-          <div className="space-y-6">
-            <div className="rounded-xl border p-6">
-              <h3 className="mb-4 text-xl font-semibold">
+        <section className="mt-16">
+          <div className="mb-6">
+            <h2 className="text-2xl font-semibold">Key Design Decisions</h2>
+
+            <p className="mt-2 max-w-3xl leading-7 text-gray-600">
+              Explore the technical and product decisions that shaped the
+              Commute Matcher platform.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            <Link
+              href="/systems-design/design-decisions/postgresql-over-mongodb"
+              className="group rounded-xl border p-6 transition duration-200 hover:-translate-y-1 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-4"
+            >
+              <div className="mb-4 flex items-start justify-between gap-4">
+                <span className="rounded-full border px-3 py-1 text-sm">
+                  Database
+                </span>
+
+                <span
+                  aria-hidden="true"
+                  className="text-xl transition-transform duration-200 group-hover:translate-x-1"
+                >
+                  →
+                </span>
+              </div>
+
+              <h3 className="mb-3 text-xl font-semibold">
                 PostgreSQL over MongoDB
               </h3>
 
-              <div className="space-y-4">
-                <div>
-                  <p className="font-semibold">Decision</p>
-                  <p>Use PostgreSQL as the primary database.</p>
-                </div>
+              <p className="mb-5 leading-7 text-gray-600">
+                PostgreSQL was selected to support strongly related data,
+                reliable matching logic, auditability, and transactional
+                consistency.
+              </p>
 
-                <div>
-                  <p className="font-semibold">Reason</p>
-                  <p>
-                    The platform contains strong relationships between users,
-                    rides, bookings, payments, and verification records that
-                    benefit from relational modeling.
-                  </p>
-                </div>
+              <span className="font-semibold underline underline-offset-4">
+                Read the full decision
+              </span>
+            </Link>
 
-                <div>
-                  <p className="font-semibold">Trade-off</p>
-                  <p>
-                    Reduced schema flexibility compared to MongoDB, but stronger
-                    data integrity, consistency, and transactional support.
-                  </p>
-                </div>
+            <Link
+              href="/systems-design/design-decisions/automatic-booking"
+              className="group rounded-xl border p-6 transition duration-200 hover:-translate-y-1 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-4"
+            >
+              <div className="mb-4 flex items-start justify-between gap-4">
+                <span className="rounded-full border px-3 py-1 text-sm">
+                  Booking Experience
+                </span>
+
+                <span
+                  aria-hidden="true"
+                  className="text-xl transition-transform duration-200 group-hover:translate-x-1"
+                >
+                  →
+                </span>
               </div>
-            </div>
 
-            <div className="rounded-xl border p-6">
-              <h3 className="mb-4 text-xl font-semibold">
+              <h3 className="mb-3 text-xl font-semibold">
+                Automatic Booking Instead of Driver Approval
+              </h3>
+
+              <p className="mb-5 leading-7 text-gray-600">
+                Publishing a route is treated as a driver&apos;s pre-commitment,
+                allowing eligible passengers to reserve available seats without
+                waiting for manual approval.
+              </p>
+
+              <span className="font-semibold underline underline-offset-4">
+                Read the full decision
+              </span>
+            </Link>
+
+            <Link
+              href="/systems-design/design-decisions/verified-commuters"
+              className="group rounded-xl border p-6 transition duration-200 hover:-translate-y-1 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-4"
+            >
+              <div className="mb-4 flex items-start justify-between gap-4">
+                <span className="rounded-full border px-3 py-1 text-sm">
+                  Product Design
+                </span>
+
+                <span
+                  aria-hidden="true"
+                  className="text-xl transition-transform duration-200 group-hover:translate-x-1"
+                >
+                  →
+                </span>
+              </div>
+
+              <h3 className="mb-3 text-xl font-semibold">
+                Verified Commuters Rather Than Open Ride Sharing
+              </h3>
+
+              <p className="mb-5 leading-7 text-gray-600">
+                Commute Matcher prioritises a trusted network of identifiable
+                commuters rather than allowing unrestricted participation from
+                anonymous users.
+              </p>
+
+              <span className="font-semibold underline underline-offset-4">
+                Read the full decision
+              </span>
+            </Link>
+
+            <Link
+              href="/systems-design/design-decisions/verification-first-approach"
+              className="group rounded-xl border p-6 transition duration-200 hover:-translate-y-1 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-4"
+            >
+              <div className="mb-4 flex items-start justify-between gap-4">
+                <span className="rounded-full border px-3 py-1 text-sm">
+                  Trust & Safety
+                </span>
+
+                <span
+                  aria-hidden="true"
+                  className="text-xl transition-transform duration-200 group-hover:translate-x-1"
+                >
+                  →
+                </span>
+              </div>
+
+              <h3 className="mb-3 text-xl font-semibold">
                 Verification-First Approach
               </h3>
 
-              <div className="space-y-4">
-                <div>
-                  <p className="font-semibold">Decision</p>
-                  <p>Prioritize identity verification before ride matching.</p>
-                </div>
+              <p className="mb-5 leading-7 text-gray-600">
+                Users must meet the required verification level before creating
+                routes, booking seats, or joining confirmed commutes.
+              </p>
 
-                <div>
-                  <p className="font-semibold">Reason</p>
-                  <p>
-                    Trust and safety are core requirements for commuters sharing
-                    rides with people they may not know.
-                  </p>
-                </div>
+              <span className="font-semibold underline underline-offset-4">
+                Read the full decision
+              </span>
+            </Link>
 
-                <div>
-                  <p className="font-semibold">Trade-off</p>
-                  <p>
-                    Additional onboarding steps may reduce sign-up speed, but
-                    significantly increase trust and platform safety.
-                  </p>
-                </div>
+            <article className="rounded-xl border p-6">
+              <div className="mb-4 flex items-start justify-between gap-4">
+                <span className="rounded-full border px-3 py-1 text-sm">
+                  Matching
+                </span>
+
+                <span className="text-sm font-medium text-gray-500">
+                  Coming soon
+                </span>
               </div>
-            </div>
 
-            <div className="rounded-xl border p-6">
-              <h3 className="mb-4 text-xl font-semibold">
+              <h3 className="mb-3 text-xl font-semibold">
                 Route-Based Matching
               </h3>
 
-              <div className="space-y-4">
-                <div>
-                  <p className="font-semibold">Decision</p>
-                  <p>
-                    Match commuters based on recurring routes and schedules.
-                  </p>
-                </div>
-
-                <div>
-                  <p className="font-semibold">Reason</p>
-                  <p>
-                    The primary use case is daily commuting rather than
-                    on-demand transportation.
-                  </p>
-                </div>
-
-                <div>
-                  <p className="font-semibold">Trade-off</p>
-                  <p>
-                    Less flexibility than ride-hailing platforms, but improved
-                    matching quality and predictable commuting experiences.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="rounded-xl border p-6">
-              <h3 className="mb-4 text-xl font-semibold">
-                Low-Connectivity Design
-              </h3>
-
-              <div className="space-y-4">
-                <div>
-                  <p className="font-semibold">Decision</p>
-                  <p>
-                    Design workflows that tolerate unreliable network
-                    conditions.
-                  </p>
-                </div>
-
-                <div>
-                  <p className="font-semibold">Reason</p>
-                  <p>
-                    Many commuters may experience poor connectivity during
-                    travel or in areas with weak network coverage.
-                  </p>
-                </div>
-
-                <div>
-                  <p className="font-semibold">Trade-off</p>
-                  <p>
-                    Additional implementation complexity, but a more reliable
-                    user experience in real-world conditions.
-                  </p>
-                </div>
-              </div>
-            </div>
+              <p className="leading-7 text-gray-600">
+                Commuters are matched using recurring routes and schedules
+                rather than an on-demand ride-hailing model.
+              </p>
+            </article>
           </div>
         </section>
+
+        {/* PRODUCT STRATEGY 
+
+        <section className="mt-16">
+          <div className="mb-6">
+            <p className="mb-2 text-sm font-semibold uppercase tracking-wide">
+              Product Strategy
+            </p>
+
+            <h2 className="text-2xl font-semibold">
+              Market Entry and Growth Decisions
+            </h2>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-3">
+            <article className="rounded-xl border p-5">
+              <div className="mb-4 flex items-start justify-between gap-4">
+                <span className="rounded-full border px-3 py-1 text-sm">
+                  Market Entry
+                </span>
+
+                <span className="text-sm font-medium text-gray-500">
+                  Coming soon
+                </span>
+              </div>
+
+              <h3 className="text-lg font-semibold">
+                Focus on One Corridor First
+              </h3>
+            </article>
+
+            <article className="rounded-xl border p-5">
+              <div className="mb-4 flex items-start justify-between gap-4">
+                <span className="rounded-full border px-3 py-1 text-sm">
+                  Growth Strategy
+                </span>
+
+                <span className="text-sm font-medium text-gray-500">
+                  Coming soon
+                </span>
+              </div>
+
+              <h3 className="text-lg font-semibold">
+                Build Trust Before Expanding the Network
+              </h3>
+            </article>
+
+            <article className="rounded-xl border p-5">
+              <div className="mb-4 flex items-start justify-between gap-4">
+                <span className="rounded-full border px-3 py-1 text-sm">
+                  Product Focus
+                </span>
+
+                <span className="text-sm font-medium text-gray-500">
+                  Coming soon
+                </span>
+              </div>
+
+              <h3 className="text-lg font-semibold">
+                Daily Commuting Instead of General Ride Sharing
+              </h3>
+            </article>
+          </div>
+        </section> */}
+
+        {/* SUPPORTING TECHNICAL DECISIONS 
+
+        <section className="mt-16">
+          <div className="mb-6">
+            <p className="mb-2 text-sm font-semibold uppercase tracking-wide">
+              Supporting Technical Decisions
+            </p>
+
+            <h2 className="text-2xl font-semibold">
+              Data Integrity and Backend Design
+            </h2>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-2">
+            <article className="rounded-xl border p-5">
+              <div className="mb-4 flex items-start justify-between gap-4">
+                <span className="rounded-full border px-3 py-1 text-sm">
+                  Data Modelling
+                </span>
+
+                <span className="text-sm font-medium text-gray-500">
+                  Coming soon
+                </span>
+              </div>
+
+              <h3 className="text-lg font-semibold">
+                <code>created_by</code> Instead of <code>user_id</code>
+              </h3>
+            </article>
+
+            <article className="rounded-xl border p-5">
+              <div className="mb-4 flex items-start justify-between gap-4">
+                <span className="rounded-full border px-3 py-1 text-sm">
+                  Booking Integrity
+                </span>
+
+                <span className="text-sm font-medium text-gray-500">
+                  Coming soon
+                </span>
+              </div>
+
+              <h3 className="text-lg font-semibold">
+                Backend-Controlled Seat Availability
+              </h3>
+            </article>
+
+            <article className="rounded-xl border p-5">
+              <div className="mb-4 flex items-start justify-between gap-4">
+                <span className="rounded-full border px-3 py-1 text-sm">
+                  Access Control
+                </span>
+
+                <span className="text-sm font-medium text-gray-500">
+                  Coming soon
+                </span>
+              </div>
+
+              <h3 className="text-lg font-semibold">
+                Role-Based Access Control
+              </h3>
+            </article>
+
+            <article className="rounded-xl border p-5">
+              <div className="mb-4 flex items-start justify-between gap-4">
+                <span className="rounded-full border px-3 py-1 text-sm">
+                  Data Integrity
+                </span>
+
+                <span className="text-sm font-medium text-gray-500">
+                  Coming soon
+                </span>
+              </div>
+
+              <h3 className="text-lg font-semibold">
+                Foreign-Key Relationships
+              </h3>
+            </article>
+          </div>
+        </section> */}
+
+        <div className="mt-8">
+          <Link
+            href="/systems-design/other-decisions"
+            className="font-semibold underline underline-offset-4"
+          >
+            View other product, strategy, and technical decisions →
+          </Link>
+        </div>
+
         <section className="mt-16">
           <h2 className="mb-6 text-2xl font-semibold">Design Artifacts</h2>
 

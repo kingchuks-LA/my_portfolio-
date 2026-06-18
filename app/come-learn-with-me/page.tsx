@@ -79,17 +79,6 @@ export default function ComeLearnWithMePage() {
                 challenge of designing trust into commuter platforms.
               </p>
             </div>
-
-            <div className="rounded-xl border p-6">
-              <h3 className="mb-2 text-xl font-semibold">
-                Why I Chose PostgreSQL Over MongoDB
-              </h3>
-              <p className="leading-7">
-                A reflection on data relationships, integrity, trade-offs, and
-                why relational modeling made sense for the Trusted Carpool
-                Network.
-              </p>
-            </div>
           </div>
         </section>
 
