@@ -1,4 +1,56 @@
 import Link from "next/link";
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "From Manual Approval to Automatic Booking: Designing a Faster Booking Experience for Commuters",
+
+  description:
+    "A human-centred design case study on how automating ride bookings reduced friction and improved the commuter experience in Commute Matcher.",
+
+  alternates: {
+    canonical:
+      "https://www.kingsleyemeka.com/come-learn-with-me/manual-approval-to-automatic-booking",
+  },
+
+  openGraph: {
+    title:
+      "From Manual Approval to Automatic Booking: Designing a Faster Booking Experience for Commuters",
+
+    description:
+      "A human-centred design case study on how automating ride bookings reduced friction and improved the commuter experience in Commute Matcher.",
+
+    url: "https://www.kingsleyemeka.com/come-learn-with-me/manual-approval-to-automatic-booking",
+
+    siteName: "Kingsley Emeka",
+
+    type: "article",
+
+    images: [
+      {
+        url: "/images/manual-approval-to-automatic-booking-og.png",
+        width: 1200,
+        height: 630,
+        alt: "From Manual Approval to Automatic Booking — Designing a Faster Booking Experience for Commuters",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title:
+      "From Manual Approval to Automatic Booking: Designing a Faster Booking Experience for Commuters",
+
+    description:
+      "A human-centred design case study on how automating ride bookings reduced friction and improved the commuter experience in Commute Matcher.",
+
+    images: ["/images/manual-approval-to-automatic-booking-og.png"],
+  },
+};
+
+
 export default function ManualApprovalToAutomaticBooking() {
   return (
     <article className="mx-auto max-w-3xl px-6 py-16 text-gray-800">
