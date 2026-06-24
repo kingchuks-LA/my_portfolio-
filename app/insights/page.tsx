@@ -4,7 +4,7 @@ export default function ComeLearnWithMePage() {
   return (
     <main className="min-h-screen px-6 py-16 md:px-20">
       <section className="mx-auto max-w-5xl">
-        <h1 className="mb-6 text-4xl font-bold">Come Learn With Me</h1>
+        <h1 className="mb-6 text-4xl font-bold">Insights</h1>
 
         <p className="mb-8 text-2xl italic leading-relaxed text-gray-700">
           Documenting my journey through AI, technology, and human-centred
@@ -65,9 +65,7 @@ export default function ComeLearnWithMePage() {
         </section>
 
         <section className="mt-12">
-          <h2 className="mb-6 text-2xl font-semibold">
-            Published Reflections
-          </h2>
+          <h2 className="mb-6 text-2xl font-semibold">Published Reflections</h2>
 
           <article className="rounded-xl border p-6 transition hover:-translate-y-1 hover:shadow-md">
             <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-gray-500">
@@ -85,7 +83,7 @@ export default function ComeLearnWithMePage() {
             </p>
 
             <Link
-              href="/come-learn-with-me/manual-approval-to-automatic-booking"
+              href="/insights/manual-approval-to-automatic-booking"
               className="inline-flex font-semibold underline decoration-yellow-300 decoration-4 underline-offset-4 transition hover:text-gray-600"
             >
               Read reflection →
@@ -94,9 +92,7 @@ export default function ComeLearnWithMePage() {
         </section>
 
         <section className="mt-12">
-          <h2 className="mb-6 text-2xl font-semibold">
-            Upcoming Reflections
-          </h2>
+          <h2 className="mb-6 text-2xl font-semibold">Upcoming Reflections</h2>
 
           <div className="space-y-6">
             <div className="rounded-xl border p-6">

@@ -14,8 +14,28 @@ export default function ContactPage() {
           connect.
         </p>
 
+        <section className="mt-16 max-w-5xl mx-auto rounded-xl border p-8 mb-12">
+          <h3 className="mb-6 text-2xl font-semibold">
+            Bridging People, Products, and Technology
+          </h3>
+          <p className="text-lg leading-8">
+            I enjoy turning complex problems into practical solutions by
+            bridging business goals, human-centered design, and technical
+            execution. Whether you're building meaningful products,exploring
+            human-centered AI and human–AI collaboration , or looking for
+            someone who can connect user needs with system architecture, I'd
+            love to hear from you.
+          </p>
+          <p className="mt-4 text-lg leading-8">
+            I'm open to Technical Product Owner, Product Manager, and Business
+            Systems Analyst opportunities, as well as remote collaborations,
+            international roles, and PhD research initiatives focused on
+            Human-Centered AI.
+          </p>
+        </section>
+
         <section className="grid gap-6 md:grid-cols-3">
-          <div className="rounded-xl border p-6">
+          <div className="rounded-xl border p-8 transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
             <h2 className="mb-3 text-xl font-semibold">LinkedIn</h2>
             <p>Let's connect professionally and exchange ideas.</p>
             <a
@@ -27,9 +47,12 @@ export default function ContactPage() {
             </a>
           </div>
 
-          <div className="rounded-xl border p-6">
+          <div className="rounded-xl border p-8 transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
             <h2 className="mb-3 text-xl font-semibold">Email</h2>
-            <p>For opportunities, collaborations, or questions.</p>
+            <p>
+              For opportunities, collaborations, or academic research
+              discussions.
+            </p>
 
             <a
               href="mailto:kingsley_emeka_c@yahoo.com?subject=Portfolio%20Inquiry"
@@ -39,33 +62,18 @@ export default function ContactPage() {
             </a>
           </div>
 
-          <div className="rounded-xl border p-6">
+          <div className="rounded-xl border p-8 transition-all duration-200 hover:-translate-y-1 hover:shadow-md">
             <h2 className="mb-3 text-xl font-semibold">GitHub</h2>
-            <p>Explore my technical projects and code.</p>
+            <p>Explore my technical projects, system designs, and code.</p>
 
             <a
               href="https://github.com/kingchuks-LA?tab=repositories"
               target="_blank"
               className="underline"
             >
-              View Projects →
+              View GitHub Profile →
             </a>
           </div>
-        </section>
-
-        <section className="mt-16 rounded-xl border p-8">
-          <p className="text-lg leading-8">
-            I enjoy turning complex problems into practical solutions by
-            bridging business goals, product thinking, and engineering
-            execution. Whether you're building meaningful products, exploring
-            new ideas, or looking for someone who can connect strategy with
-            implementation, I'd love to hear from you.
-          </p>
-          <p className="text-lg leading-8">
-            Open to product, business analysis, and technical product
-            opportunities, including remote collaborations and international
-            roles.
-          </p>
         </section>
       </section>
     </main>

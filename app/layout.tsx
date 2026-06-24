@@ -1,4 +1,5 @@
 <Navbar />;
+
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "./components/Navbar";
@@ -17,6 +18,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Kingsley Emeka",
   description: "Kingsley Emeka's personal portfolio",
+  metadataBase: new URL("https://www.kingsleyemeka.com"),
 };
 
 export default function RootLayout({

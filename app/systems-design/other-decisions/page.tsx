@@ -111,7 +111,7 @@ export default function OtherDecisionsPage() {
           href="/systems-design"
           className="mb-10 inline-block font-semibold underline underline-offset-4"
         >
-          ← Back to Systems Design
+          ← Back to All Design Decisions
         </Link>
 
         <header className="mb-14">

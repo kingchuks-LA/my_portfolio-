@@ -9,7 +9,7 @@ export default function AutomaticBookingDecisionPage() {
           href="/systems-design"
           className="mb-10 inline-block font-semibold underline underline-offset-4"
         >
-          ← Back to Systems Design
+          ← Back to All Design Decisions
         </Link>
 
         <header className="mb-12">
@@ -317,7 +317,7 @@ export default function AutomaticBookingDecisionPage() {
             href="/systems-design"
             className="font-semibold underline underline-offset-4"
           >
-            ← Return to all design decisions
+            ← Back to All Design Decisions
           </Link>
         </div>
       </article>

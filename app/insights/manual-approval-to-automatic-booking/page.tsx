@@ -50,15 +50,14 @@ export const metadata: Metadata = {
   },
 };
 
-
 export default function ManualApprovalToAutomaticBooking() {
   return (
     <article className="mx-auto max-w-3xl px-6 py-16 text-gray-800">
       <Link
-        href="/come-learn-with-me"
+        href="/insights"
         className="mb-8 inline-flex font-semibold underline decoration-yellow-300 decoration-4 underline-offset-4 transition hover:text-gray-600"
       >
-        ← Back to Come Learn With Me
+        ← Back to Insights
       </Link>
       <header className="mb-12">
         <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-gray-500">
@@ -269,10 +268,10 @@ export default function ManualApprovalToAutomaticBooking() {
       </div>
       <div className="mt-12 border-t pt-8">
         <Link
-          href="/come-learn-with-me"
+          href="/insights"
           className="inline-flex font-semibold underline decoration-yellow-300 decoration-4 underline-offset-4 transition hover:text-gray-600"
         >
-          ← Back to Come Learn With Me
+          ← Back to Insights
         </Link>
       </div>
     </article>

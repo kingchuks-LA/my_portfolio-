@@ -7,9 +7,9 @@ const navLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Experience", href: "/experience" },
-  { name: "Systems Design", href: "/systems-design" },
+  { name: "System Design", href: "/systems-design" },
   { name: "Projects", href: "/projects" },
-  { name: "Come Learn With Me", href: "/come-learn-with-me" },
+  { name: "Insights", href: "/insights" },
   { name: "Resume", href: "/resume" },
   { name: "Contact", href: "/contact" },
 ];
@@ -34,7 +34,7 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="flex flex-wrap items-center justify-center gap-2 py-4">
+    <nav className="flex flex-wrap items-center justify-center gap-8 py-4">
       {navLinks.map((link) => {
         const active = isActive(link.href);
 
@@ -43,10 +43,10 @@ export default function Navbar() {
             key={link.href}
             href={link.href}
             aria-current={active ? "page" : undefined}
-            className={`rounded-full px-4 py-2 transition-colors ${
+            className={`border-b-2 pb-1 transition-all ${
               active
-                ? "bg-slate-900 text-white"
-                : "text-black hover:bg-gray-100"
+                ? "border-slate-900 font-medium text-slate-900"
+                : "border-transparent text-black hover:border-slate-300"
             }`}
           >
             {link.name}
