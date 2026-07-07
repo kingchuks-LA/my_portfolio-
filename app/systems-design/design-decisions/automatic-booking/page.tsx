@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 
 export default function AutomaticBookingDecisionPage() {
@@ -50,8 +49,8 @@ export default function AutomaticBookingDecisionPage() {
               <p>
                 Commute Matcher operates differently. Its drivers are commuters
                 first. They may be getting ready for work, already driving,
-                attending a meeting, or simply not checking the application
-                when a passenger submits a booking request.
+                attending a meeting, or simply not checking the application when
+                a passenger submits a booking request.
               </p>
 
               <p>
@@ -102,10 +101,9 @@ export default function AutomaticBookingDecisionPage() {
               </div>
 
               <p>
-                This approach would give drivers greater control over
-                individual bookings. However, it would also make passengers
-                dependent on drivers noticing and responding to requests in
-                time.
+                This approach would give drivers greater control over individual
+                bookings. However, it would also make passengers dependent on
+                drivers noticing and responding to requests in time.
               </p>
 
               <p>
@@ -142,8 +140,8 @@ export default function AutomaticBookingDecisionPage() {
               <ul className="list-disc space-y-2 pl-6">
                 <li>the driver might not see the notification immediately;</li>
                 <li>
-                  the passenger might not know whether to continue searching
-                  for another route;
+                  the passenger might not know whether to continue searching for
+                  another route;
                 </li>
                 <li>available seats could remain temporarily blocked;</li>
                 <li>
@@ -163,8 +161,8 @@ export default function AutomaticBookingDecisionPage() {
 
               <p>
                 By publishing a route, choosing a departure time, and declaring
-                available seats, the driver is explicitly indicating that
-                those seats are available to eligible passengers.
+                available seats, the driver is explicitly indicating that those
+                seats are available to eligible passengers.
               </p>
 
               <div className="rounded-xl border p-6">
@@ -275,8 +273,8 @@ export default function AutomaticBookingDecisionPage() {
               </p>
 
               <p>
-                Drivers may still cancel a route or report a passenger, but
-                they do not need to approve every valid booking individually.
+                Drivers may still cancel a route or report a passenger, but they
+                do not need to approve every valid booking individually.
               </p>
             </div>
           </section>
@@ -287,8 +285,7 @@ export default function AutomaticBookingDecisionPage() {
             <div className="space-y-4 leading-8">
               <p>
                 Automatic booking gives passengers immediate confirmation and
-                reduces their dependence on drivers responding to
-                notifications.
+                reduces their dependence on drivers responding to notifications.
               </p>
 
               <p>

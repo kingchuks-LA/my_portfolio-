@@ -1,4 +1,5 @@
-import Link from "next/link";
+import { FeaturedCaseStudy } from "@/components/featured-case-study";
+import { featuredCaseStudy } from "@/data/featured-case-study";
 
 export default function ProjectsPage() {
   return (
@@ -16,87 +17,7 @@ export default function ProjectsPage() {
           Each project reflects how I move from problem discovery to solution
           design and implementation.
         </p>
-        <section className="mt-16">
-          <div className="rounded-xl border p-6">
-            <p className="mb-3 text-sm font-medium uppercase tracking-wide">
-              Featured Case Study
-            </p>
-            <section className="mb-16">
-              <h2 className="mb-3 text-2xl font-semibold">
-                Trusted Carpool Network
-              </h2>
-              <p className="mb-4 leading-7">
-                A verification-first commuter matching platform designed to
-                improve trust and safety for daily commuters in Lagos.
-              </p>
-              <div className="mb-6 flex flex-wrap gap-2">
-                <span className="rounded-full border px-3 py-1 text-sm">
-                  Product Strategy
-                </span>
-
-                <span className="rounded-full border px-3 py-1 text-sm">
-                  Business Analysis
-                </span>
-
-                <span className="rounded-full border px-3 py-1 text-sm">
-                  System Design
-                </span>
-
-                <span className="rounded-full border px-3 py-1 text-sm">
-                  PostgreSQL
-                </span>
-
-                <span className="rounded-full border px-3 py-1 text-sm">
-                  Node.js
-                </span>
-              </div>
-              <ul className="mb-6 list-disc pl-6 space-y-2">
-                <li>Defined user journeys and verification workflows</li>
-                <li>Designed system architecture and service interactions</li>
-                <li>Created relational database models and ERDs</li>
-                <li>Built backend APIs and matching logic</li>
-              </ul>
-              <div className="mb-6 grid gap-4 md:grid-cols-3">
-                <div>
-                  <p className="font-semibold">Role</p>
-                  <p>Product Owner</p>
-                </div>
-
-                <div>
-                  <p className="font-semibold">Status</p>
-                  <p>MVP In Progress</p>
-                </div>
-
-                <div>
-                  <p className="font-semibold">Focus</p>
-                  <p>Trust, Safety, Matching</p>
-                </div>
-              </div>
-              <div className="mb-6 grid gap-4 md:grid-cols-3">
-                <div>
-                  <p className="font-semibold">User Flows</p>
-                  <p>3+</p>
-                </div>
-
-                <div>
-                  <p className="font-semibold">Diagrams</p>
-                  <p>Architecture + ERD</p>
-                </div>
-
-                <div>
-                  <p className="font-semibold">Database</p>
-                  <p>PostgreSQL</p>
-                </div>
-              </div>
-              <Link
-                href="/case-studies/trusted-carpool-network"
-                className="font-semibold underline"
-              >
-                View Case Study →
-              </Link>
-            </section>
-          </div>
-        </section>
+        <FeaturedCaseStudy caseStudy={featuredCaseStudy} />
 
         <section className="mt-16">
           <h2 className="mb-6 text-3xl font-semibold">Other Technical Work</h2>
