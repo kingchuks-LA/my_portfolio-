@@ -21,6 +21,9 @@ export interface Badge {
   id: string;
   label: string;
 }
+/**
+ * Hero section displayed at the top of the case study.
+ */
 
 export interface CaseStudyHero {
   title: string;
@@ -33,7 +36,61 @@ export interface CaseStudyHero {
   badges: Badge[];
 }
 
+export interface OverviewSection {
+  description: string;
+}
+
+/**
+ * Problem Statement section.
+ */
+export interface ProblemStatementSection {
+  description: string;
+}
+
+/**
+ * Product Vision section.
+ */
+export interface ProductVisionSection {
+  description: string;
+}
+
+/**
+ * My Role section.
+ */
+
+export interface MyRoleSection {
+  title: string;
+  summary: string;
+  responsibilities: string[];
+}
+
+/**
+ * What I Delivered section.
+ */
+export interface DeliverablesSection {
+  items: string[];
+}
+
+export interface JourneyStep {
+  title: string;
+  description: string;
+}
+
+export interface UserJourneySection {
+  introduction: string;
+  steps: JourneyStep[];
+}
+
+/**
+ * Complete Case Study.
+ */
+
 export interface CaseStudy {
   hero: CaseStudyHero;
-  overview: string;
+  overview: OverviewSection;
+  problemStatement: ProblemStatementSection;
+  productVision: ProductVisionSection;
+  userJourney: UserJourneySection;
+  myRole: MyRoleSection;
+  deliverables: DeliverablesSection;
 }
