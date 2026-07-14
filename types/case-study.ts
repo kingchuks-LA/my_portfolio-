@@ -82,6 +82,127 @@ export interface UserJourneySection {
 }
 
 /**
+ * MVP section.
+ */
+export interface MVPSection {
+  description: string;
+
+  objectives: string[];
+}
+
+/**
+ * Product Requirements section.
+ */
+export interface ProductRequirementsSection {
+  description: string;
+
+  highlights: string[];
+}
+/**
+ * User Stories section.
+ */
+export interface UserStoriesSection {
+  description: string;
+
+  highlights: string[];
+}
+/**
+ * Acceptance Criteria section.
+ */
+export interface AcceptanceCriteriaSection {
+  description: string;
+
+  highlights: string[];
+}
+
+/**
+ * Product Roadmap section.
+ */
+export interface RoadmapItem {
+  phase: string;
+  goal: string;
+}
+
+export interface RoadmapSection {
+  description: string;
+
+  roadmap: RoadmapItem[];
+}
+
+/**
+ * Wireframes section.
+ */
+export interface WireframesSection {
+  description: string;
+
+  screens: string[];
+}
+
+/**
+ * Database Design section.
+ */
+export interface DatabaseDesignSection {
+  description: string;
+
+  entities: string[];
+}
+/**
+ * REST API section.
+ */
+
+export interface ApiInteraction {
+  action: string;
+  resource: string;
+}
+
+export interface RestApiSection {
+  description: string;
+
+  interactions: ApiInteraction[];
+}
+export interface ArchitectureLayer {
+  title: string;
+  responsibility: string;
+}
+
+/**
+ * System Architecture section.
+ */
+export interface SystemArchitectureSection {
+  description: string;
+  requestFlows: Record<string, RequestFlow>;
+  layers: ArchitectureLayer[];
+}
+
+export interface ArchitectureExample {
+  label: string;
+  flow: string;
+}
+
+export interface ArchitectureLayer {
+  icon: string;
+  title: string;
+  responsibility: string;
+  behaviours: LayerBehaviour[];
+  examples: ArchitectureExample[];
+  technologies: string[];
+}
+export interface JourneyStep {
+  title: string;
+  description: string;
+}
+export interface RequestFlow {
+  title: string;
+  summary: string;
+  steps:JourneyStep[];
+}
+
+export interface LayerBehaviour {
+  flow: string;
+  description: string;
+}
+
+/**
  * Complete Case Study.
  */
 
@@ -91,6 +212,15 @@ export interface CaseStudy {
   problemStatement: ProblemStatementSection;
   productVision: ProductVisionSection;
   userJourney: UserJourneySection;
+  mvp: MVPSection;
+  productRequirements: ProductRequirementsSection;
+  userStories: UserStoriesSection;
+  acceptanceCriteria: AcceptanceCriteriaSection;
+  roadmap: RoadmapSection;
+  wireframes: WireframesSection;
+  databaseDesign: DatabaseDesignSection;
+  restApi: RestApiSection;
+  systemArchitecture: SystemArchitectureSection;
   myRole: MyRoleSection;
   deliverables: DeliverablesSection;
 }
