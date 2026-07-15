@@ -51,6 +51,16 @@ export const trustedCarpoolNetwork: CaseStudy = {
     ],
   },
 
+  breadcrumb: [
+  {
+    label: "Projects",
+    href: "/projects",
+  },
+  {
+    label: "Trusted Carpool Network",
+  },
+],
+
   overview: {
     description: `Trusted Carpool Network is a verification-first commuter platform designed to connect professionals travelling along similar routes while prioritising safety, trust, and reliability. Rather than simply matching drivers and passengers, the platform establishes trust before every journey through identity verification and structured commuter matching.
 

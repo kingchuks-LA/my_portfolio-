@@ -202,6 +202,11 @@ export interface LayerBehaviour {
   description: string;
 }
 
+export interface BreadcrumbItem {
+  label: string;
+  href?: string;
+}
+
 /**
  * Complete Case Study.
  */
@@ -221,6 +226,7 @@ export interface CaseStudy {
   databaseDesign: DatabaseDesignSection;
   restApi: RestApiSection;
   systemArchitecture: SystemArchitectureSection;
+  breadcrumb: BreadcrumbItem[];
   myRole: MyRoleSection;
   deliverables: DeliverablesSection;
 }

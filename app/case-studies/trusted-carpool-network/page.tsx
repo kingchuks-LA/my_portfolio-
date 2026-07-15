@@ -32,6 +32,7 @@ import { DomainModel } from "@/components/case-study/DomainModel";
 import { ApiInteractionFlow } from "@/components/case-study/ApiInteractionFlow";
 import { LayeredArchitectureDiagram } from "@/components/case-study/LayeredArchitectureDiagram";
 import { RequestFlowSelector } from "@/components/case-study/RequestFlowSelector";
+import { Breadcrumb } from "@/components/case-study";
 
 export default function TrustedCarpoolNetworkPage() {
   const caseStudy = trustedCarpoolNetwork;
@@ -46,14 +47,15 @@ export default function TrustedCarpoolNetworkPage() {
 
   return (
     <main className="mx-auto max-w-6xl px-6 py-16">
+      <Breadcrumb items={caseStudy.breadcrumb} />
       <Hero hero={caseStudy.hero} />
 
-      <div className="mt-16 grid grid-cols-12 gap-12">
-        <aside className="col-span-3">
+      <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-12">
+        <aside className="lg:col-span-3">
           <CaseStudyNavigation navigation={trustedCarpoolNavigation} />
         </aside>
 
-        <div className="col-span-9">
+        <div className="lg:col-span-9">
           <Section id="overview" title="Overview">
             <p className="text-lg leading-8 text-gray-600">
               {caseStudy.overview.description}
@@ -210,7 +212,7 @@ export default function TrustedCarpoolNetworkPage() {
               {caseStudy.databaseDesign.description}
             </p>
 
-            <DomainModel entities={caseStudy.databaseDesign.entities} />
+            {/*<DomainModel entities={caseStudy.databaseDesign.entities} />*/}
 
             <EvidenceCard
               title="Entity Relationship Diagram"
@@ -280,43 +282,6 @@ export default function TrustedCarpoolNetworkPage() {
                 Next
               </button>
             </div>
-          </Section>
-
-          <Section id="my-role" title="My Contribution"></Section>
-          <Section id="my-role" title="My Role">
-            <h3 className="mb-4 text-xl font-semibold">
-              {caseStudy.myRole.title}
-            </h3>
-
-            <p className="mb-6 text-lg leading-8 text-gray-600">
-              {caseStudy.myRole.summary}
-            </p>
-
-            <ul className="space-y-3">
-              {caseStudy.myRole.responsibilities.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </Section>
-          <Section id="deliverables" title="What I Delivered">
-            <ul className="space-y-3">
-              {caseStudy.deliverables.items.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </Section>
-          <Section id="deliverables" title="What I Delivered">
-            <ul className="space-y-3">
-              {caseStudy.deliverables.items.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <span aria-hidden="true" className="mt-1 text-green-600">
-                    ✓
-                  </span>
-
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
           </Section>
         </div>
       </div>

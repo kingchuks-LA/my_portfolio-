@@ -19,3 +19,4 @@
 export { Hero } from "./Hero";
 export { Section } from "./Section";
 export { default as Overview } from "./Overview";
+export * from "./Breadcrumb";
