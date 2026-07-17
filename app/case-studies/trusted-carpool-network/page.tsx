@@ -28,21 +28,21 @@ import { CaseStudyNavigation } from "@/components/case-study/CaseStudyNavigation
 import { trustedCarpoolNavigation } from "@/data/case-study-navigation";
 import { Roadmap } from "@/components/case-study/Roadmap";
 import { WireframeGallery } from "@/components/case-study/WireframeGallery";
-import { DomainModel } from "@/components/case-study/DomainModel";
 import { ApiInteractionFlow } from "@/components/case-study/ApiInteractionFlow";
 import { LayeredArchitectureDiagram } from "@/components/case-study/LayeredArchitectureDiagram";
 import { RequestFlowSelector } from "@/components/case-study/RequestFlowSelector";
 import { Breadcrumb } from "@/components/case-study";
+import { LayerDetailPanel } from "@/components/case-study/LayerDetailPanel";
 
 export default function TrustedCarpoolNetworkPage() {
   const caseStudy = trustedCarpoolNetwork;
 
   const [selectedFlow, setSelectedFlow] = useState("Create Trip");
 
-  const [currentStep, setCurrentStep] = useState(0);
+  const [selectedLayerIndex, setSelectedLayerIndex] = useState(0);
   const handleFlowChange = (flow: string) => {
     setSelectedFlow(flow);
-    setCurrentStep(0);
+    setSelectedLayerIndex(0);
   };
 
   return (
@@ -212,8 +212,6 @@ export default function TrustedCarpoolNetworkPage() {
               {caseStudy.databaseDesign.description}
             </p>
 
-            {/*<DomainModel entities={caseStudy.databaseDesign.entities} />*/}
-
             <EvidenceCard
               title="Entity Relationship Diagram"
               description="Explore the complete ER diagram showing the entities, relationships, and data model that underpin the Trusted Carpool Network."
@@ -245,42 +243,19 @@ export default function TrustedCarpoolNetworkPage() {
               selectedFlow={selectedFlow}
               onSelect={handleFlowChange}
             />
-            <p className="mt-6 text-gray-600 leading-7">
-              Select a request, then use the controls below to follow how it is
-              processed through each layer of the system.
-            </p>
 
             <LayeredArchitectureDiagram
               layers={caseStudy.systemArchitecture.layers}
               selectedFlow={selectedFlow}
-              currentStep={currentStep}
+              selectedLayerIndex={selectedLayerIndex}
+              onLayerSelect={setSelectedLayerIndex}
             />
-            <div className="mt-8 flex items-center justify-between">
-              <button
-                onClick={() => setCurrentStep((step) => Math.max(step - 1, 0))}
-                className="rounded-lg border px-4 py-2"
-              >
-                Previous
-              </button>
 
-              <span className="text-sm text-gray-600">
-                Step {currentStep + 1} of{" "}
-                {caseStudy.systemArchitecture.layers.length}
-              </span>
-
-              <button
-                onClick={() =>
-                  setCurrentStep((step) =>
-                    Math.min(
-                      step + 1,
-                      caseStudy.systemArchitecture.layers.length - 1
-                    )
-                  )
-                }
-                className="rounded-lg border px-4 py-2"
-              >
-                Next
-              </button>
+            <div className="mt-8 rounded-xl border border-dashed border-gray-300 p-8">
+              <LayerDetailPanel
+                layer={caseStudy.systemArchitecture.layers[selectedLayerIndex]}
+                selectedFlow={selectedFlow}
+              />
             </div>
           </Section>
         </div>

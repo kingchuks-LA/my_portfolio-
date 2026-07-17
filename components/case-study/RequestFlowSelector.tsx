@@ -17,11 +17,11 @@ export function RequestFlowSelector({
   return (
     <div className="mb-12">
       <h3 className="text-lg font-semibold">
-        Explore a User Request
+        How the System Works
       </h3>
 
       <p className="mt-2 text-gray-600">
-        Select a real user action to see how it flows through the system.
+        Select a user action, then click any architecture layer to inspect its role in processing the request.
       </p>
 
       <div className="mt-6 flex flex-wrap gap-3">

@@ -72,7 +72,7 @@ export function FeaturedCaseStudy({ caseStudy }: FeaturedCaseStudyProps) {
         {/* What you'll explore */}
         <div className="space-y-4">
           <h3 className="text-lg font-semibold text-gray-900">
-            What You'll Explore
+            What You&apos;ll Explore
           </h3>
 
           <ul className="grid gap-3 md:grid-cols-2">

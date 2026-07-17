@@ -17,9 +17,9 @@ export default function AboutPage() {
         </p>
 
         <p className="mb-10 text-lg leading-8">
-          I hold a Master's degree in Web Engineering and I am a Certified Scrum
-          Product Owner. My work focuses on turning complex problems into clear
-          requirements, structured workflows, and implementable solutions.
+          I hold a Master&apos;s degree in Web Engineering and I am a Certified
+          Scrum Product Owner. My work focuses on turning complex problems into
+          clear requirements, structured workflows, and implementable solutions.
         </p>
       </section>
       <section className="mt-16">
@@ -34,11 +34,11 @@ export default function AboutPage() {
 
           <p>
             Driven by a desire to deepen my technical knowledge, I pursued a
-            Master's degree in Web Engineering in Germany. During this period, I
-            gained hands-on experience with web technologies, distributed
-            systems, databases, and software engineering principles while
-            strengthening my understanding of how complex systems are designed
-            and built.
+            Master&apos;s degree in Web Engineering in Germany. During this
+            period, I gained hands-on experience with web technologies,
+            distributed systems, databases, and software engineering principles
+            while strengthening my understanding of how complex systems are
+            designed and built.
           </p>
 
           <p>
