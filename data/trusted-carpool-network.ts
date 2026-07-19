@@ -52,14 +52,14 @@ export const trustedCarpoolNetwork: CaseStudy = {
   },
 
   breadcrumb: [
-  {
-    label: "Projects",
-    href: "/projects",
-  },
-  {
-    label: "Trusted Carpool Network",
-  },
-],
+    {
+      label: "Projects",
+      href: "/projects",
+    },
+    {
+      label: "Trusted Carpool Network",
+    },
+  ],
 
   overview: {
     description: `Trusted Carpool Network is a verification-first commuter platform designed to connect professionals travelling along similar routes while prioritising safety, trust, and reliability. Rather than simply matching drivers and passengers, the platform establishes trust before every journey through identity verification and structured commuter matching.
@@ -410,6 +410,7 @@ Rather than becoming another ride-hailing service, the goal was to build a verif
       {
         icon: "👤",
         title: "Commuter",
+        shortTitle: "Commuter",
         responsibility:
           "Drivers and passengers interact with the platform to register, verify their identity, create trips, join journeys and leave feedback.",
         behaviours: [
@@ -462,6 +463,7 @@ Rather than becoming another ride-hailing service, the goal was to build a verif
       {
         icon: "💻",
         title: "Presentation Layer",
+        shortTitle: "Presentation",
         responsibility:
           "Provides the web interface where users interact with the platform and submit requests.",
         behaviours: [
@@ -514,6 +516,7 @@ Rather than becoming another ride-hailing service, the goal was to build a verif
       {
         icon: "🔗",
         title: "API Layer",
+        shortTitle: "API",
         responsibility:
           "Exposes REST endpoints that receive requests from the frontend and route them to the appropriate services.",
         behaviours: [
@@ -565,6 +568,7 @@ Rather than becoming another ride-hailing service, the goal was to build a verif
       {
         icon: "⚙️",
         title: "Application Services Layer",
+        shortTitle: "Services",
         responsibility:
           "Implements the business rules for verification, trip management, booking, matching and feedback.",
         behaviours: [
@@ -616,6 +620,7 @@ Rather than becoming another ride-hailing service, the goal was to build a verif
       {
         icon: "🗄️",
         title: "Data Layer",
+       shortTitle: "Database",
         responsibility:
           "Stores and retrieves application data including users, routes, bookings, verifications and feedback.",
         behaviours: [

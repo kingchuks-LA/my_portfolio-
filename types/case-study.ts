@@ -163,6 +163,7 @@ export interface RestApiSection {
 export interface ArchitectureLayer {
   title: string;
   responsibility: string;
+  shortTitle: string;
 }
 
 /**
