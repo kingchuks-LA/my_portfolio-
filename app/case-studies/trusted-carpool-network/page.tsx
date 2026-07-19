@@ -234,44 +234,6 @@ export default function TrustedCarpoolNetworkPage() {
             />
           </Section>
 
-          {/*<Section id="system-architecture" title="System Architecture">
-            <p className="text-lg leading-8 text-gray-600">
-              {caseStudy.systemArchitecture.description}
-            </p>
-
-            <div className="mt-10">
-              <h3 className="text-xl font-semibold">How the System Works</h3>
-
-              <p className="mt-2 text-gray-600">
-                Select a user action, then click any architecture layer to see
-                how the request is processed through the system.
-              </p>
-            </div>
-            <RequestFlowSelector
-              selectedFlow={selectedFlow}
-              onSelect={handleFlowChange}
-            />
-
-            <div className="mt-10">
-              <LayeredArchitectureDiagram
-                layers={caseStudy.systemArchitecture.layers}
-                selectedFlow={selectedFlow}
-                selectedLayerIndex={selectedLayerIndex}
-                onLayerSelect={setSelectedLayerIndex}
-              />
-            </div>
-
-            <div className="mt-10 flex justify-center">
-              <div className="w-full max-w-2xl rounded-xl border border-dashed border-gray-300 p-8">
-                <LayerDetailPanel
-                  layer={
-                    caseStudy.systemArchitecture.layers[selectedLayerIndex]
-                  }
-                  selectedFlow={selectedFlow}
-                />
-              </div>
-            </div>
-          </Section>*/}
           <Section id="system-architecture" title="System Architecture">
             <p className="text-lg leading-8 text-gray-600">
               {caseStudy.systemArchitecture.description}
@@ -297,18 +259,13 @@ export default function TrustedCarpoolNetworkPage() {
                 />
               </div>
 
-              <div className="mt-10 flex justify-center">
-                <div className="w-full max-w-6xl">
-                  <LayeredArchitectureDiagram
-                    layers={caseStudy.systemArchitecture.layers}
-                    selectedFlow={selectedFlow}
-                    selectedLayerIndex={selectedLayerIndex}
-                    onLayerSelect={setSelectedLayerIndex}
-                  />
-                </div>
-              </div>
+              <div className="mt-10 flex flex-col items-center gap-8">
+                <LayeredArchitectureDiagram
+                  layers={caseStudy.systemArchitecture.layers}
+                  selectedLayerIndex={selectedLayerIndex}
+                  onLayerSelect={setSelectedLayerIndex}
+                />
 
-              <div className="mt-8 flex justify-center">
                 <div className="w-full max-w-2xl">
                   <LayerDetailPanel
                     layer={
