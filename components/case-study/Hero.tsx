@@ -23,11 +23,14 @@
 
 import { CaseStudyHero } from "@/types/case-study";
 
+import { Tooltip } from "@/components/ui";
+
 interface HeroProps {
   hero: CaseStudyHero;
+  actions?: React.ReactNode;
 }
 
-export function Hero({ hero }: HeroProps) {
+export function Hero({ hero, actions }: HeroProps) {
   return (
     <header className="border-b border-gray-200 pb-12">
       <div className="space-y-6">
@@ -54,22 +57,31 @@ export function Hero({ hero }: HeroProps) {
           {hero.summary}
         </p>
         {/* Role */}
-        <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500">
-          <span>
-            <strong>Role:</strong> {hero.role}
-          </span>
+        <div className="flex items-end gap-20">
+          <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500">
+            <span>
+              <strong>Role:</strong> {hero.role}
+            </span>
 
-          <span>•</span>
+            <span>•</span>
 
-          <span>{hero.readingTime}</span>
+            <span>{hero.readingTime}</span>
 
-          <span>•</span>
+            <span>•</span>
 
-          <span>Updated {hero.lastUpdated}</span>
+            <span>Updated {hero.lastUpdated}</span>
 
-          <span>•</span>
+            <span>•</span>
 
-          <span>{hero.status}</span>
+            <span>{hero.status}</span>
+          </div>
+          {actions && (
+            <div className="shrink-0">
+              <Tooltip content="Browse the sections of this case study">
+                {actions}
+              </Tooltip>
+            </div>
+          )}
         </div>
       </div>
     </header>

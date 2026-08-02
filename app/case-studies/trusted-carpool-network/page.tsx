@@ -20,12 +20,16 @@
  * ---------------------------------------------
  */
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Hero, Section } from "@/components/case-study";
 import { trustedCarpoolNetwork } from "@/data/trusted-carpool-network";
+import { trustedCarpoolNavigation } from "@/data/trusted-carpool-navigation";
 import { EvidenceCard } from "@/components/case-study/EvidenceCard";
-import { CaseStudyNavigation } from "@/components/case-study/CaseStudyNavigation";
-import { trustedCarpoolNavigation } from "@/data/case-study-navigation";
+import {
+  NavigationButton,
+  DocumentNavigator,
+} from "@/components/document-navigation";
+
 import { Roadmap } from "@/components/case-study/Roadmap";
 import { WireframeGallery } from "@/components/case-study/WireframeGallery";
 import { ApiInteractionFlow } from "@/components/case-study/ApiInteractionFlow";
@@ -40,22 +44,61 @@ export default function TrustedCarpoolNetworkPage() {
   const [selectedFlow, setSelectedFlow] = useState("Create Trip");
 
   const [selectedLayerIndex, setSelectedLayerIndex] = useState(0);
+  const [isNavigatorOpen, setIsNavigatorOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("overview");
+
   const handleFlowChange = (flow: string) => {
     setSelectedFlow(flow);
     setSelectedLayerIndex(0);
   };
 
+  useEffect(() => {
+    const sectionIds = trustedCarpoolNavigation.flatMap((group) =>
+      group.items.map((item) => item.id)
+    );
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.find((entry) => entry.isIntersecting);
+
+        if (visible) {
+          setActiveSection(visible.target.id);
+        }
+      },
+      {
+        rootMargin: "-20% 0px -70% 0px",
+        threshold: 0,
+      }
+    );
+
+    sectionIds.forEach((id) => {
+      const element = document.getElementById(id);
+
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <main className="mx-auto max-w-6xl px-6 py-16">
+      <DocumentNavigator
+        navigation={trustedCarpoolNavigation}
+        activeSection={activeSection}
+        isOpen={isNavigatorOpen}
+        onClose={() => setIsNavigatorOpen(false)}
+      />
+
       <Breadcrumb items={caseStudy.breadcrumb} />
-      <Hero hero={caseStudy.hero} />
+      <Hero
+        hero={caseStudy.hero}
+        actions={<NavigationButton onClick={() => setIsNavigatorOpen(true)} />}
+      />
 
-      <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-12">
-        <aside className="lg:col-span-3">
-          <CaseStudyNavigation navigation={trustedCarpoolNavigation} />
-        </aside>
-
-        <div className="lg:col-span-9">
+      <div className="mt-16">
+        <div>
           <Section id="overview" title="Overview">
             <p className="text-lg leading-8 text-gray-600">
               {caseStudy.overview.description}
@@ -132,28 +175,29 @@ export default function TrustedCarpoolNetworkPage() {
               cta="Explore PRD"
               href="#"
             />
-            <Section id="user-stories" title="User Stories">
-              <p className="mb-8 text-lg leading-8 text-gray-600">
-                {caseStudy.userStories.description}
-              </p>
+          </Section>
 
-              <ul className="space-y-4">
-                {caseStudy.userStories.highlights.map((story) => (
-                  <li key={story} className="flex items-start gap-3">
-                    <span className="mt-1 text-blue-600">•</span>
+          <Section id="user-stories" title="User Stories">
+            <p className="mb-8 text-lg leading-8 text-gray-600">
+              {caseStudy.userStories.description}
+            </p>
 
-                    <span className="leading-7 text-gray-700">{story}</span>
-                  </li>
-                ))}
-              </ul>
+            <ul className="space-y-4">
+              {caseStudy.userStories.highlights.map((story) => (
+                <li key={story} className="flex items-start gap-3">
+                  <span className="mt-1 text-blue-600">•</span>
 
-              <EvidenceCard
-                title="User Stories"
-                description="Explore the complete backlog of user stories that translated commuter needs into implementable product requirements."
-                cta="Explore User Stories"
-                href="#"
-              />
-            </Section>
+                  <span className="leading-7 text-gray-700">{story}</span>
+                </li>
+              ))}
+            </ul>
+
+            <EvidenceCard
+              title="User Stories"
+              description="Explore the complete backlog of user stories that translated commuter needs into implementable product requirements."
+              cta="Explore User Stories"
+              href="#"
+            />
           </Section>
 
           <Section id="acceptance-criteria" title="Acceptance Criteria">
